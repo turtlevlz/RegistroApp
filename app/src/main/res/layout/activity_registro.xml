@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear cuenta"
+            android:textSize="28sp"
+            android:textColor="@color/primario"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Completa los datos para registrarte"
+            android:textColor="@color/text"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- 1. Nombre -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Nombre"
+            app:boxStrokeColor="@color/primario"
+            app:hintTextColor="@color/primario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 2. Correo -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_correo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="Correo electronico"
+            app:boxStrokeColor="@color/primario"
+            app:hintTextColor="@color/primario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_correo_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 3. Contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_contra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Contrasena"
+            app:boxStrokeColor="@color/primario"
+            app:hintTextColor="@color/primario"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_contra_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 4. Verificar contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_verificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="Verificar contrasena"
+            app:boxStrokeColor="@color/primario"
+            app:hintTextColor="@color/primario"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_verificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 5. Fecha de nacimiento (abre un DatePicker) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Fecha de nacimiento"
+            app:boxStrokeColor="@color/primario"
+            app:hintTextColor="@color/primario"
+            app:endIconMode="custom"
+            app:endIconDrawable="@android:drawable/ic_menu_my_calendar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_registrarse"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/primario"
+            android:textColor="@color/fondo"
+            android:text="Registrarse" />
+
+        <TextView
+            android:id="@+id/btn_volver_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ya tienes cuenta? Inicia sesion"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:layout_marginBottom="24dp" />
+    </LinearLayout>
+</ScrollView>
